@@ -20,14 +20,9 @@ public class AuctionSniperDriver extends JFrameDriver {
 	}
 
 	@SuppressWarnings("unchecked")
-	public void showSniperStatus(String statusText) {
+	public void showsSniperStatus(String statusText) {
 		new JLabelDriver(this, named(Main.SNIPER_STATUS_NAME))
 				.hasText(equalTo(statusText));
-	}
-
-	public void showsSnoperStatus(String statusLost) {
-		// TODO Auto-generated method stub
-
 	}
 
 }

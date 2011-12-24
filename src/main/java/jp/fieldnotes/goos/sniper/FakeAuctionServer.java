@@ -1,11 +1,16 @@
 package jp.fieldnotes.goos.sniper;
 
+import jp.fieldnotes.goos.SingleMessageListener;
+
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManagerListener;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.packet.Message;
 
 public class FakeAuctionServer {
+
+	private final SingleMessageListener messageListener = new SingleMessageListener();
 
 	public static final String ITEM_ID_AS_LOGIN = "auction-%s";
 
@@ -35,6 +40,7 @@ public class FakeAuctionServer {
 			@Override
 			public void chatCreated(Chat chat, boolean createdLocally) {
 				currentChat = chat;
+				chat.addMessageListener(messageListener);
 			}
 		});
 	}
@@ -43,15 +49,16 @@ public class FakeAuctionServer {
 		return itemId;
 	}
 
-	public void hasReceivedJoinRequestSniper() {
+	public void hasReceivedJoinRequestSniper() throws InterruptedException {
+		messageListener.receivesAMessage();
 	}
 
-	public void announceClosed() {
+	public void announceClosed() throws XMPPException {
+		currentChat.sendMessage(new Message());
 	}
 
 	public void stop() {
-		// TODO Auto-generated method stub
-
+		connection.disconnect();
 	}
 
 }

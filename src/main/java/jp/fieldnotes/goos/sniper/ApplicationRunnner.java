@@ -28,12 +28,12 @@ public class ApplicationRunnner {
 		thread.setDaemon(true);
 		thread.start();
 		driver = new AuctionSniperDriver(1000);
-		driver.showSniperStatus(STASUS_JOINING);
+		driver.showsSniperStatus(STASUS_JOINING);
 
 	}
 
 	public void showsSniperHasLostAuction() {
-		driver.showsSnoperStatus(STATUS_LOST);
+		driver.showsSniperStatus(STATUS_LOST);
 	}
 
 	public void stop() {
