@@ -1,4 +1,4 @@
-package jp.fieldnotes.goos;
+package jp.fieldnotes.goos.sniper;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;

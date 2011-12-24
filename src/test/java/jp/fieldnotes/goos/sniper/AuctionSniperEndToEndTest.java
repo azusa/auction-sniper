@@ -1,7 +1,5 @@
-package jp.fieldnotes.goos;
+package jp.fieldnotes.goos.sniper;
 
-import jp.fieldnotes.goos.sniper.ApplicationRunnner;
-import jp.fieldnotes.goos.sniper.FakeAuctionServer;
 
 import org.junit.After;
 import org.junit.Test;

@@ -1,5 +1,7 @@
 package jp.fieldnotes.goos.sniper;
 
+import jp.fieldnotes.goos.sniper.Main;
+
 public class ApplicationRunnner {
 
 	public static final String SNIPER_ID = "sniper";

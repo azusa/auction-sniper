@@ -1,6 +1,7 @@
 package jp.fieldnotes.goos.sniper;
 
 import static org.hamcrest.CoreMatchers.*;
+import jp.fieldnotes.goos.sniper.Main;
 
 import com.objogate.wl.swing.AWTEventQueueProber;
 import com.objogate.wl.swing.driver.JFrameDriver;

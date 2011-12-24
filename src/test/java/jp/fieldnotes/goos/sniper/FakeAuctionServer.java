@@ -1,6 +1,5 @@
 package jp.fieldnotes.goos.sniper;
 
-import jp.fieldnotes.goos.SingleMessageListener;
 
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManagerListener;
